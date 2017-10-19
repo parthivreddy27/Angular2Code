@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}
+  </h1>
+</div>
+
+<div class="main-container">
+
+<json-schema-form 
+	[schema]="mySchema"
+	[form]="myForm" 
+	(onSubmit)="onSubmit($event)" 
+	(isValid)="isValid($event)" 
+	(validationErrors)="validationErrors($event)">	
+</json-schema-form>
+	<br>
+
+	<div>
+        Is From Valid?:
+        <strong *ngIf="formIsValid || prettyValidationErrors"
+          [class.text-success]="formIsValid"
+          [class.text-danger]="!formIsValid">
+          {{formIsValid ? 'Yes' : 'No'}}
+        </strong>
+        <span *ngIf="!formIsValid && !prettyValidationErrors">n/a</span>
+        <span *ngIf="prettyValidationErrors">— validationErrors are present</span>
+        <pre *ngIf="prettyValidationErrors" class="bg-danger">{{prettyValidationErrors}}</pre>
+      </div>
+      <br>
+	<div> 
+   		<h3>Submitted form data:</h3>
+  		<pre [class.data-good]="prettySubmittedFormData !== 'null'">{{prettySubmittedFormData}}</pre>
+	</div>
+
+</div>

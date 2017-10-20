@@ -3,17 +3,18 @@
   <h1>
     Welcome to {{title}}
   </h1>
+  <p>Fill the below form with all required values to generate JSON Query Form</p>
 </div>
 
 <div class="main-container">
 
-<json-schema-form 
-	[schema]="mySchema"
-	[form]="myForm" 
-	(onSubmit)="onSubmit($event)" 
-	(isValid)="isValid($event)" 
-	(validationErrors)="validationErrors($event)">	
-</json-schema-form>
+  <json-schema-form 
+  	[schema]="mySchema"
+  	[form]="myForm" 
+  	(onSubmit)="onSubmit($event)" 
+  	(isValid)="isValid($event)" 
+  	(validationErrors)="validationErrors($event)">	
+  </json-schema-form>
 	<br>
 
 	<div>
@@ -25,7 +26,7 @@
         </strong>
         <span *ngIf="!formIsValid && !prettyValidationErrors">n/a</span>
         <span *ngIf="prettyValidationErrors">— validationErrors are present</span>
-        <pre *ngIf="prettyValidationErrors" class="bg-danger">{{prettyValidationErrors}}</pre>
+        <pre *ngIf="prettyValidationErrors" class="validation-error-msg">{{prettyValidationErrors}}</pre>
       </div>
       <br>
 	<div> 

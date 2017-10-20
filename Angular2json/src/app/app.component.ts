@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { JsonSchemaFormModule } from 'angular2-json-schema-form';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,11 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  submittedFormData:any;
+  //title of the form
   title = 'JSON Query Form';
+
+  //Variables declaration
+  submittedFormData:any;
   jsonFormValid: boolean = false;
   formValidationErrors: any;
   formIsValid: boolean = null;
@@ -19,10 +23,12 @@ export class AppComponent {
 		"start_time": {
 			"type": "number",
 			"title": "Start Time in UNIX Epoch format",
+			"minimum": 0,
 		},
 		"end_time": {
 			"type": "number",
-			"title": "End Time in UNIX Epoch format"
+			"title": "End Time in UNIX Epoch format",
+			"minimum": 0
 		},
 		"select_fields": {
 			"type": "array",
@@ -41,10 +47,10 @@ export class AppComponent {
 			"maxItems": 10, //Maximum 10 OR conditions we can add
 			"items": {
 				"type" : "array",
-        "title": "OR", //Set tile to easily understand by iser
+        		"title": "OR", //Set tile to easily understand by iser
 				"items": {
 					"type": "object",
-          "title": "AND",
+          			"title": "AND",
 					"properties": {
 			            "name": { 
 			            	"type": "string",
@@ -66,6 +72,13 @@ export class AppComponent {
 	},
 	"required": ["start_time","end_time","table","where_clause"],
   }
+
+  myForm =[
+    {
+      "type": "help",
+      "helpvalue": "<div><p>User can add OR and AND conditions in 'where clause' by using provided ADD buttons</p></div>",
+    },
+    "*"]
 
   onSubmit(data: any) {
     this.submittedFormData = data;

@@ -2,3 +2,15 @@
 	margin-left: 25%;
 	margin-right: 25%;
 }
+
+.validation-error-msg {
+	color: red;
+}
+
+.text-success {
+	color: green;
+}
+
+.text-danger {
+	color: red;
+}

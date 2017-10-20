@@ -8,9 +8,8 @@ import {
   MatButtonModule, MatCardModule, MatCheckboxModule, MatIconModule, MatMenuModule,
   MatSelectModule, MatToolbarModule, MATERIAL_COMPATIBILITY_MODE
 } from '@angular/material';
-import { RouterModule } from '@angular/router';
 
-import { JsonSchemaFormModule } from '../lib/src/json-schema-form.module';
+import { JsonSchemaFormModule } from 'angular2-json-schema-form';
 
 import { AppComponent } from './app.component';
 

@@ -1,5 +1,26 @@
 # Angular2json
 
+PREREQUISITES:
+-------------
+1. Install node.js version 6.10.2
+
+INSTRUCTIONS:
+--------------
+Do the following to install, compile and run the project after installing the required programs listed above:
+
+1. Clone the project from "git@github.com:parthivreddy27/Angular2Code.git"
+
+2. Open your command prompt, navigate to this project's directory.
+	(for this project navigate to Angular2json directory)
+
+2. Run "npm install", and it will install the necessary node modules.
+
+3. Run "npm start" for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+4. For the unit test cases please refere attached word document.
+
+========================================================================================================
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.4.
 
 ## Development server

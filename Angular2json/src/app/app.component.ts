@@ -58,7 +58,7 @@ export class AppComponent {
 			            },
 			            "value": {
 			              "type": "string",
-			              "enum": [ "frontend_vn", "9000", "backend_vn", "9001" ]
+			              "enum": [ "frontend-vn", "9000", "backend-vn", "9001" ]
 			            },
 			            "operator": {
 			              "type": "string",
@@ -70,7 +70,7 @@ export class AppComponent {
 			}
 		},
 	},
-	"required": ["start_time","end_time","table","where_clause"],
+	"required": ["start_time","end_time","select_fields","table","where_clause"],
   }
 
   myForm =[
